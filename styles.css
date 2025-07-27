@@ -1,0 +1,120 @@
+/* ==========================
+   Global Theme Variables
+   ========================== */
+
+:root {
+  /* === Dark Theme (Default) === */
+
+  /* Backgrounds */
+  --bg-dark: hsl(231 50% 2%);
+  --bg: hsl(228 32% 5%);
+  --bg-light: hsl(227 19% 10%);
+  --surface: hsl(227 25% 7%);
+  --surface-hover: hsl(227 25% 13%);
+
+  /* Text */
+  --text: hsl(227 100% 98%);
+  --text-muted: hsl(227 18% 72%);
+  --on-surface: var(--text);
+
+  /* Borders & Highlights */
+  --highlight: hsl(227 11% 41%);
+  --border: hsl(227 14% 30%);
+  --border-muted: hsl(227 20% 20%);
+
+  /* Semantic Colors */
+  --primary: hsl(228 75% 78%);
+  --secondary: hsl(46 47% 59%);
+  --danger: hsl(9 26% 64%);
+  --warning: hsl(52 19% 57%);
+  --success: hsl(146 17% 59%);
+  --info: hsl(217 28% 65%);
+}
+
+/* ==========================
+   Light Theme Overrides
+   ========================== */
+
+body.light {
+  /* Backgrounds */
+  --bg-dark: hsl(226 30% 91%);
+  --bg: hsl(226 72% 96%);
+  --bg-light: hsl(226 100% 100%);
+  --surface: hsl(226 70% 98%);
+  --surface-hover: hsl(226 70% 92%);
+
+  /* Text */
+  --text: hsl(230 53% 6%);
+  --text-muted: hsl(227 14% 30%);
+  --on-surface: var(--text);
+
+  /* Borders & Highlights */
+  --highlight: hsl(227 100% 100%);
+  --border: hsl(227 10% 53%);
+  --border-muted: hsl(227 14% 65%);
+
+  /* Semantic Colors */
+  --primary: hsl(230 39% 35%);
+  --secondary: hsl(49 100% 13%);
+  --danger: hsl(9 21% 41%);
+  --warning: hsl(52 23% 34%);
+  --success: hsl(147 19% 36%);
+  --info: hsl(217 22% 41%);
+}
+
+/* ==========================
+   Example Usage
+   ========================== */
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+}
+
+.container {
+  background-color: var(--surface);
+  padding: 1rem;
+  border: 1px solid var(--border-muted);
+  border-radius: 8px;
+  color: var(--on-surface);
+}
+
+button {
+  background-color: var(--primary);
+  color: var(--bg-dark);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--highlight);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.border {
+  border: 1px solid var(--border);
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+/* Semantic Utility Classes */
+.text-primary { color: var(--primary); }
+.text-danger  { color: var(--danger); }
+.text-warning { color: var(--warning); }
+.text-success { color: var(--success); }
+.text-info    { color: var(--info); }
+
+.bg-primary { background-color: var(--primary); }
+.bg-danger  { background-color: var(--danger); }
+.bg-warning { background-color: var(--warning); }
+.bg-success { background-color: var(--success); }
+.bg-info    { background-color: var(--info); }
